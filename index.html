@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emy, la naine</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e8f5e9, #f1f8e9);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #2e7d32;
+      animation: fadeIn 2s ease;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    nav button {
+      background: #a5d6a7;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background: #66bb6a;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 50px 20px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .quiz-question {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    img.avatar {
+      width: 150px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+
+    .quiz-button {
+      margin-top: 10px;
+      background: #efefef;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .quiz-button:hover {
+      background: #dcedc8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Emy, la GOAT (Grignoteuse Officielle Avec Talent)</h1>
+ <img class="avatar" src="avatar_emy.png" alt="Avatar d'Emy (à insérer)">
+  <nav>
+    <button onclick="scrollToId('apropos')">À propos</button>
+    <button onclick="scrollToId('moments')">Moments cultes</button>
+    <button onclick="scrollToId('message')">Message</button>
+    <button onclick="scrollToId('quiz')">Quiz</button>
+    <button onclick="scrollToId('musique')">🎵</button>
+  </nav>
+</header>
+
+<section id="apropos">
+  <h2>À propos d’Emy</h2>
+  <ul>
+    <li>Âge : 15 ans</li>
+    <li>Taille : 1m50 (comme un ourson d’eau 🐻‍❄️)</li>
+    <li>Style : vêtements larges + lunettes + bracelets</li>
+    <li>Caractère : râleuse mais adorable</li>
+    <li>Objet fétiche : un pain au chocolat 🥐</li>
+  </ul>
+</section>
+
+<section id="moments">
+  <h2>Moments cultes</h2>
+  <ul>
+    <li>Phrase culte : "bouffe tes couilles" (🫣)</li>
+    <li>Le jour où un bigoudi est resté coincé dans ses cheveux 😅</li>
+    <li>Snapchat : surnom "Marie-Charlotte Mohamed" 💀</li>
+    <li>30000 crushs différents au collège ❤️‍🔥</li>
+    <li>Animal totem : le tardigrade (petit mais puissant)</li>
+  </ul>
+</section>
+
+<section id="message">
+  <h2>Message pour Emy</h2>
+  <p>Emy,<br><br>
+Emy,
+Il faut que je prenne un moment pour te dire quelque chose d’important, que tu n’entends peut-être pas assez souvent : tu es incroyable. Vraiment. Je ne dis pas ça à la légère, ni pour te flatter. Je le pense profondément, sincèrement, sans conditions. Tu es de ces personnes rares qui laissent une trace, qui inspirent, qui illuminent tout autour d’elles sans même s’en rendre compte.
+Tu as cette façon unique de faire sentir les gens à l’aise, de faire rire quand il le faut, d’écouter quand on a besoin de parler, d’être là sans poser de questions, juste avec ta présence rassurante. Ta gentillesse n’est pas une façade, c’est une force. Tu es attentionnée, vraie, drôle, intelligente, et tu dégages une énergie que peu de gens ont : une énergie qui fait du bien.
+Ce qui me touche le plus chez toi, c’est que malgré tout ce que tu vis ou as vécu, tu restes toi-même. Tu gardes cette lumière, cette bienveillance, cette force tranquille qui t’habite. Tu ne t’en rends peut-être pas compte, mais tu es une source d’inspiration pour les autres. Ton courage, ta sensibilité, ta capacité à aimer sans limites… tout ça fait de toi une personne exceptionnelle.
+Tu es de celles qu’on n’oublie pas. De celles qui marquent une vie. Et franchement, je suis tellement reconnaissant(e) de te connaître. Le monde a besoin de plus de gens comme toi. Et moi, j’ai juste besoin que tu saches à quel point tu es précieuse. Ne laisse jamais personne te faire douter de ta valeur. Tu es suffisante. Tu es forte. Tu es belle, à l’intérieur comme à l’extérieur. Tu es Emy. Et c’est plus que suffisant pour illuminer le monde.
+Merci d’être toi. Ne change jamais.
+💛<br><br>
+</section>
+
+<section id="quiz">
+  <h2>Quiz : Connais-tu vraiment Emy ?</h2>
+  <div class="quiz-question">
+    <p><strong>1. Quelle est la nourriture préférée d'Emy ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">La bouffe</button>
+    <button class="quiz-button" onclick="reveal(this, false)">Les épinards</button>
+  </div>
+  <div class="quiz-question">
+    <p><strong>2. Quelle est sa taille ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">1m50</button>
+    <button class="quiz-button" onclick="reveal(this, false)">1m90</button>
+  </div>
+  <div class="quiz-question">
+    <p><strong>3. Quelle appli la représente le mieux ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">Tinder</button>
+    <button class="quiz-button" onclick="reveal(this, false)">Boursorama</button>
+  </div>
+</section>
+
+<section id="musique">
+  <h2>🎶 La chanson d’Emy</h2>
+  <p>Parce qu'on sait tous que <strong>“Ma vie” de Jul</strong> la représente mieux que n’importe quel texte.</p>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/PMEbCAV2ZLg" 
+    title="Ma vie - Jul" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<footer>
+  Créé avec amour par Noam Hardy
+</footer>
+
+<script>
+  function scrollToId(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function reveal(btn, correct) {
+    if (correct) {
+      btn.innerHTML += ' ✅';
+      btn.classList.add("correct");
+    } else {
+      btn.innerHTML += ' ❌';
+      btn.disabled = true;
+    }
+  }
+</script>
+
+</body>
+</html>
