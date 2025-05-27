@@ -152,10 +152,31 @@
 
 <section id="quiz">
   <h2>Quiz</h2>
-  <div class="quiz-question">
-    <p>Quel est l’objet fétiche d’Emy ?</p>
-    <button class="quiz-button" onclick="this.nextElementSibling.innerText='🥐 Correct !'">Un pain au chocolat</button>
-    <p></p>
+    <div class="quiz-question">
+    <p><strong>1. quel matiere Emy deteste le plus ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">les maths</button>
+    <button class="quiz-button" onclick="reveal(this, false)">l'anglais</button>
+  </div>
+   <div class="quiz-question">
+    <p><strong>2. Quelle ami(e) prefaire t'elle ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">Sahina</button>
+    <button class="quiz-button" onclick="reveal(this, true)">Noam</button>
+  </div>
+   <div class="quiz-question">
+    <p><strong>3. Quelle est la nourriture prefere ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">les pain au chocolat</button>
+    <button class="quiz-button" onclick="reveal(this, true)">les croissant</button>
+    <button class="quiz-button" onclick="reveal(this, false)">l'ail</button>
+    <button class="quiz-button" onclick="reveal(this, true)">les pates</button>
+    <button class="quiz-button" onclick="reveal(this, true)">le fromage</button>
+    <button class="quiz-button" onclick="reveal(this, true)">la pain</button>
+    <button class="quiz-button" onclick="reveal(this, false)">les oignon</button>
+    <button class="quiz-button" onclick="reveal(this, true)">les gateau</button>
+  </div>
+   <div class="quiz-question">
+    <p><strong>4. quel est la chose prefere de Emy ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">la nourriture</button>
+    <button class="quiz-button" onclick="reveal(this, false)">sa chienne</button>
   </div>
 </section>
 
@@ -167,7 +188,7 @@
 </section>
 
 <footer>
-  <p>&copy; 2025 Pour Emy, avec beaucoup d’amour 💚</p>
+  <p>&copy; 2025 Pour Emy de Noam fait avec avec beaucoup d’amour </p>
 </footer>
 
 <script>
