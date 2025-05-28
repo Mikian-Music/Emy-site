@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emy, la naine</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e8f5e9, #f1f8e9);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #2e7d32;
+      animation: fadeIn 2s ease;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    nav button {
+      background: #a5d6a7;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background: #66bb6a;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 50px 20px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .quiz-question {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    img.avatar {
+      width: 150px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+
+    .quiz-button {
+      margin-top: 10px;
+      background: #efefef;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .quiz-button:hover {
+      background: #dcedc8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Emy, la GOAT (Grignoteuse Officielle Avec Talent)</h1>
+  <img class="avatar" src="avatar_emy.png" alt="Avatar d'Emy">
+  <nav>
+    <button onclick="scrollToId('apropos')">À propos</button>
+    <button onclick="scrollToId('moments')">Moments cultes</button>
+    <button onclick="scrollToId('message')">Message</button>
+    <button onclick="scrollToId('quiz')">Quiz</button>
+    <button onclick="scrollToId('musique')">🎵</button>
+  </nav>
+</header>
+
+<section id="apropos">
+  <h2>À propos d’Emy</h2>
+  <ul>
+    <li>Âge : 15 ans</li>
+    <li>Taille : 1m50 (comme un ourson d’eau 🐻‍❄️)</li>
+    <li>Style : vêtements larges + lunettes + bracelets</li>
+    <li>Caractère : râleuse mais adorable</li>
+    <li>Objet fétiche : un pain au chocolat 🥐</li>
+  </ul>
+</section>
+
+<section id="moments">
+  <h2>Moments cultes</h2>
+  <ul>
+    <li>Phrase culte : "bouffe tes couilles" (🫣)</li>
+    <li>Mouvement culte : "doigt d'honneur" 🖕</li>
+    <li>Le jour où un bigoudi est resté coincé dans ses cheveux 😅</li>
+    <li>Snapchat : surnom "Marie-Charlotte Mohamed" 💀</li>
+    <li>30000 crushs différents au collège ❤️‍🔥</li>
+    <li>
+      Animal totem : le tardigrade (petit mais puissant)
+      <button onclick="window.location.href='tardigrade.html'" style="
+        margin-left: 10px;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #a5d6a7;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 0.9em;
+      ">
+        En savoir plus
+      </button>
+    </li>
+  </ul>
+</section>
+
+<section id="message">
+  <h2>Message pour Emy</h2>
+  <p>
+    Emy,<br><br>
+    Il faut que je prenne un moment pour te dire quelque chose d’important, que tu n’entends peut-être pas assez souvent : tu es incroyable. [...]
+  </p>
+</section>
+
+<section id="quiz">
+  <h2>Quiz</h2>
+  <div class="quiz-question">
+    <p><strong>1. Quelle matière Emy déteste le plus ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">les maths</button>
+    <button class="quiz-button" onclick="reveal(this, false)">l'anglais</button>
+  </div>
+  <div class="quiz-question">
+    <p><strong>2. Quel(le) ami(e) préfère-t-elle ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">Sahina</button>
+    <button class="quiz-button" onclick="reveal(this, true)">Noam</button>
+  </div>
+  <div class="quiz-question">
+    <p><strong>3. Quelle est sa nourriture préférée ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">les pains au chocolat</button>
+    <button class="quiz-button" onclick="reveal(this, true)">les croissants</button>
+    <button class="quiz-button" onclick="reveal(this, false)">l'ail</button>
+    <button class="quiz-button" onclick="reveal(this, true)">les pâtes</button>
+    <button class="quiz-button" onclick="reveal(this, true)">le fromage</button>
+    <button class="quiz-button" onclick="reveal(this, true)">le pain</button>
+    <button class="quiz-button" onclick="reveal(this, false)">les oignons</button>
+    <button class="quiz-button" onclick="reveal(this, true)">les gâteaux</button>
+  </div>
+  <div class="quiz-question">
+    <p><strong>4. Quelle est la chose préférée d'Emy ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">la nourriture</button>
+    <button class="quiz-button" onclick="reveal(this, false)">sa chienne</button>
+  </div>
+</section>
+
+<section id="musique">
+  <h2>Musique pour toi</h2>
+  <p>Parce qu'une ambiance sans musique, c’est pas vraiment une ambiance 🎶</p>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/f3XADwlZLko"
+    title="Un poco - Ninho" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+</section>
+
+<footer>
+  <p>&copy; 2025 Pour Emy de Noam fait avec beaucoup d’amour</p>
+</footer>
+
+<script>
+  function scrollToId(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function reveal(button, isCorrect) {
+    if (button.disabled) return;
+
+    const container = button.closest('.quiz-question');
+    const buttons = container.querySelectorAll('button');
+    buttons.forEach(btn => btn.disabled = true);
+
+    if (isCorrect) {
+      button.classList.add('correct');
+      button.textContent += " ✅";
+    } else {
+      button.classList.add('incorrect');
+      button.textContent += " ❌";
+    }
+  }
+</script>
+
+</body>
+</html>
