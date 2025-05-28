@@ -87,6 +87,11 @@
       font-weight: bold;
     }
 
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+
     .quiz-button {
       margin-top: 10px;
       background: #efefef;
@@ -130,10 +135,16 @@
   <h2>Moments cultes</h2>
   <ul>
     <li>Phrase culte : "bouffe tes couilles" (🫣)</li>
+    <li>mouvement culte : "doigt d'honneur" (emoji doigt d'honneur)</li>
     <li>Le jour où un bigoudi est resté coincé dans ses cheveux 😅</li>
     <li>Snapchat : surnom "Marie-Charlotte Mohamed" 💀</li>
     <li>30000 crushs différents au collège ❤️‍🔥</li>
-    <li>Animal totem : le tardigrade (petit mais puissant)</li>
+  <li>
+  Animal totem : le tardigrade (petit mais puissant)
+  <button onclick="window.location.href='tardigrade.html'" style="margin-left:10px; padding:4px 8px; border-radius:5px; background:#a5d6a7; border:none; cursor:pointer;">
+    En savoir plus
+  </button>
+</li>
   </ul>
 </section>
 
@@ -141,40 +152,35 @@
   <h2>Message pour Emy</h2>
   <p>
     Emy,<br><br>
-    Il faut que je prenne un moment pour te dire quelque chose d’important, que tu n’entends peut-être pas assez souvent : tu es incroyable. Vraiment. Je ne dis pas ça à la légère, ni pour te flatter. Je le pense profondément, sincèrement, sans conditions. Tu es de ces personnes rares qui laissent une trace, qui inspirent, qui illuminent tout autour d’elles sans même s’en rendre compte.<br><br>
-    Tu as cette façon unique de faire sentir les gens à l’aise, de faire rire quand il le faut, d’écouter quand on a besoin de parler, d’être là sans poser de questions, juste avec ta présence rassurante. Ta gentillesse n’est pas une façade, c’est une force. Tu es attentionnée, vraie, drôle, intelligente, et tu dégages une énergie que peu de gens ont : une énergie qui fait du bien.<br><br>
-    Ce qui me touche le plus chez toi, c’est que malgré tout ce que tu vis ou as vécu, tu restes toi-même. Tu gardes cette lumière, cette bienveillance, cette force tranquille qui t’habite. Tu ne t’en rends peut-être pas compte, mais tu es une source d’inspiration pour les autres. Ton courage, ta sensibilité, ta capacité à aimer sans limites… tout ça fait de toi une personne exceptionnelle.<br><br>
-    Tu es de celles qu’on n’oublie pas. De celles qui marquent une vie. Et franchement, je suis tellement reconnaissant(e) de te connaître. Le monde a besoin de plus de gens comme toi. Et moi, j’ai juste besoin que tu saches à quel point tu es précieuse. Ne laisse jamais personne te faire douter de ta valeur. Tu es suffisante. Tu es forte. Tu es belle, à l’intérieur comme à l’extérieur. Tu es Emy. Et c’est plus que suffisant pour illuminer le monde.<br><br>
-    Merci d’être toi. Ne change jamais.<br>
-    💛
+    Il faut que je prenne un moment pour te dire quelque chose d’important, que tu n’entends peut-être pas assez souvent : tu es incroyable. [...]
   </p>
 </section>
 
 <section id="quiz">
   <h2>Quiz</h2>
-    <div class="quiz-question">
-    <p><strong>1. quel matiere Emy deteste le plus ?</strong></p>
+  <div class="quiz-question">
+    <p><strong>1. Quelle matière Emy déteste le plus ?</strong></p>
     <button class="quiz-button" onclick="reveal(this, true)">les maths</button>
     <button class="quiz-button" onclick="reveal(this, false)">l'anglais</button>
   </div>
-   <div class="quiz-question">
-    <p><strong>2. Quelle ami(e) prefaire t'elle ?</strong></p>
+  <div class="quiz-question">
+    <p><strong>2. Quel(le) ami(e) préfère-t-elle ?</strong></p>
     <button class="quiz-button" onclick="reveal(this, true)">Sahina</button>
     <button class="quiz-button" onclick="reveal(this, true)">Noam</button>
   </div>
-   <div class="quiz-question">
-    <p><strong>3. Quelle est la nourriture prefere ?</strong></p>
-    <button class="quiz-button" onclick="reveal(this, true)">les pain au chocolat</button>
-    <button class="quiz-button" onclick="reveal(this, true)">les croissant</button>
+  <div class="quiz-question">
+    <p><strong>3. Quelle est sa nourriture préférée ?</strong></p>
+    <button class="quiz-button" onclick="reveal(this, true)">les pains au chocolat</button>
+    <button class="quiz-button" onclick="reveal(this, true)">les croissants</button>
     <button class="quiz-button" onclick="reveal(this, false)">l'ail</button>
-    <button class="quiz-button" onclick="reveal(this, true)">les pates</button>
+    <button class="quiz-button" onclick="reveal(this, true)">les pâtes</button>
     <button class="quiz-button" onclick="reveal(this, true)">le fromage</button>
-    <button class="quiz-button" onclick="reveal(this, true)">la pain</button>
-    <button class="quiz-button" onclick="reveal(this, false)">les oignon</button>
-    <button class="quiz-button" onclick="reveal(this, true)">les gateau</button>
+    <button class="quiz-button" onclick="reveal(this, true)">le pain</button>
+    <button class="quiz-button" onclick="reveal(this, false)">les oignons</button>
+    <button class="quiz-button" onclick="reveal(this, true)">les gâteaux</button>
   </div>
-   <div class="quiz-question">
-    <p><strong>4. quel est la chose prefere de Emy ?</strong></p>
+  <div class="quiz-question">
+    <p><strong>4. Quelle est la chose préférée d'Emy ?</strong></p>
     <button class="quiz-button" onclick="reveal(this, true)">la nourriture</button>
     <button class="quiz-button" onclick="reveal(this, false)">sa chienne</button>
   </div>
@@ -183,17 +189,30 @@
 <section id="musique">
   <h2>Musique pour toi</h2>
   <p>Parce qu'une ambiance sans musique, c’est pas vraiment une ambiance 🎶</p>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/f3XADwlZLko" 
-    title="Un poco - Ninho" frameborder="0" allowfullscreen></iframe>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/f3XADwlZLko"
+    title="Un poco - Ninho" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
 </section>
 
 <footer>
-  <p>&copy; 2025 Pour Emy de Noam fait avec avec beaucoup d’amour </p>
+  <p>&copy; 2025 Pour Emy de Noam fait avec beaucoup d’amour</p>
 </footer>
 
 <script>
   function scrollToId(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function reveal(button, isCorrect) {
+    if (isCorrect) {
+      button.classList.add('correct');
+      button.textContent += " ✅";
+    } else {
+      button.classList.add('incorrect');
+      button.textContent += " ❌";
+    }
+    button.disabled = true;
   }
 </script>
 
