@@ -13,20 +13,24 @@
       padding: 30px;
       line-height: 1.6;
     }
+
     h1 {
       color: #2e7d32;
       text-align: center;
     }
+
     section {
       max-width: 800px;
       margin: auto;
     }
+
     img {
       display: block;
       margin: 30px auto;
       max-width: 300px;
     }
-    button {
+
+    .back-button {
       background: #a5d6a7;
       border: none;
       padding: 10px 20px;
@@ -35,8 +39,10 @@
       cursor: pointer;
       display: block;
       margin: 40px auto 0;
+      transition: 0.3s;
     }
-    button:hover {
+
+    .back-button:hover {
       background: #66bb6a;
       color: white;
     }
@@ -45,74 +51,44 @@
 <body>
   <section>
     <h1>Le Tardigrade</h1>
-    <p><strong>Le tardigrade</strong>, aussi surnommé <strong>ourson d’eau</strong>, est une des créatures les plus fascinantes de la planète. Voici tout ce qu’il faut savoir sur cet animal minuscule mais presque indestructible :</p>
+    <p><strong>Le tardigrade</strong>, surnommé <strong>ourson d’eau</strong>, est un micro-animal presque indestructible.</p>
 
-    <h2>🧬 1. C’est quoi un tardigrade ?</h2>
-    <p>Le tardigrade est un micro-animal invertébré. Il fait partie d’un groupe appelé les extrêmophiles, c’est-à-dire des êtres vivants capables de survivre dans des conditions extrêmes.</p>
+    <h2>🧬 1. C’est quoi ?</h2>
+    <p>Un extrêmophile microscopique, capable de survivre dans les pires conditions.</p>
 
-    <h2>📏 2. Quelle est sa taille ?</h2>
-    <p>Taille moyenne : 0,1 à 0,5 mm (il faut un microscope pour le voir !)<br>
-    Les plus grands peuvent atteindre 1,2 mm.<br>
-    Il a 8 pattes avec de petites griffes au bout, comme un mini-ourson 🐾</p>
+    <h2>📏 2. Taille</h2>
+    <p>Entre 0,1 mm et 1,2 mm. 8 pattes, griffes, et une bouille d’ourson 🐾</p>
 
-    <h2>🍽️ 3. Que mange un tardigrade ?</h2>
-    <p>Il se nourrit principalement de :
-      <ul>
-        <li>Algues</li>
-        <li>Lichens</li>
-        <li>Mousses</li>
-        <li>Parfois de petits organismes unicellulaires</li>
-      </ul>
-      Il aspire sa nourriture avec une trompe percée de stylets (comme une paille piquante).
-    </p>
-
-    <h2>🌍 4. Où vit-il ?</h2>
-    <p>Il vit presque partout sur Terre :
-      <ul>
-        <li>Dans la mousse ou le lierre humide</li>
-        <li>Dans les sols humides</li>
-        <li>Dans les lacs, mers et océans</li>
-        <li>Sur les glaciers, dans le désert, ou même dans des sources chaudes</li>
-      </ul>
-    </p>
-
-    <h2>🧊🔥💀 5. Pourquoi est-il célèbre ?</h2>
-    <p>Parce qu’il survit à presque tout :
-      <ul>
-        <li>🔥 Jusqu’à 150°C</li>
-        <li>❄️ Jusqu’à -272°C (près du zéro absolu)</li>
-        <li>☢️ À des doses de radiation mortelles</li>
-        <li>🌌 Il a même survécu dans l’espace</li>
-        <li>💧 Il peut se déshydrater pendant des années puis revenir à la vie (cryptobiose)</li>
-      </ul>
-    </p>
-
-    <h2>🧠 6. À quoi il sert ?</h2>
-    <p>Le tardigrade est utile pour la science :
-      <ul>
-        <li>🧪 Recherche spatiale : comprendre comment survivre dans l’espace</li>
-        <li>💉 Médecine : protéines protectrices de l’ADN (traitements contre le cancer, le vieillissement)</li>
-        <li>🌍 Biologie extrême : comprendre les limites de la vie sur Terre (et ailleurs)</li>
-      </ul>
-    </p>
-
-    <h2>🔬 7. Fait amusant</h2>
-    <p>Il n’a pas changé depuis plus de 500 millions d’années.<br>
-    C’est un fossile vivant qui a survécu à toutes les extinctions massives.</p>
-
-    <h2>🧸 En résumé</h2>
+    <h2>🍽️ 3. Nourriture</h2>
     <ul>
-      <li><strong>Taille :</strong> 0,1 à 0,5 mm</li>
-      <li><strong>Habitat :</strong> Partout sur Terre</li>
-      <li><strong>Nourriture :</strong> Algues, lichens, petites cellules</li>
-      <li><strong>Surnom :</strong> Ourson d’eau</li>
-      <li><strong>Pouvoir spécial :</strong> Survie extrême</li>
-      <li><strong>Utilité scientifique :</strong> Biologie, espace, médecine</li>
+      <li>Algues</li>
+      <li>Lichens</li>
+      <li>Mousses</li>
+    </ul>
+
+    <h2>🌍 4. Habitat</h2>
+    <ul>
+      <li>Sols humides</li>
+      <li>Mousse, forêts, lacs, déserts, glaciers</li>
+    </ul>
+
+    <h2>🧊🔥💀 5. Super-pouvoirs</h2>
+    <ul>
+      <li>Survit à -272°C et +150°C</li>
+      <li>Supporte l’espace et les radiations</li>
+      <li>Entre en cryptobiose pour "hiberner" des années</li>
+    </ul>
+
+    <h2>🔬 6. Utile pour :</h2>
+    <ul>
+      <li>Recherche spatiale</li>
+      <li>Médecine (protection de l’ADN)</li>
+      <li>Biologie extrême</li>
     </ul>
 
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Tardigrade_-_SEM_Image_01.jpg" alt="Image d'un tardigrade" title="Le célèbre ourson d’eau">
 
-    <button onclick="window.history.back()">⬅ Retour</button>
+    <button class="back-button" onclick="window.history.back()">⬅ Retour</button>
   </section>
 </body>
 </html>

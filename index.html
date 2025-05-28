@@ -135,16 +135,25 @@
   <h2>Moments cultes</h2>
   <ul>
     <li>Phrase culte : "bouffe tes couilles" (🫣)</li>
-    <li>mouvement culte : "doigt d'honneur" (emoji doigt d'honneur)</li>
+    <li>Mouvement culte : "doigt d'honneur" 🖕</li>
     <li>Le jour où un bigoudi est resté coincé dans ses cheveux 😅</li>
     <li>Snapchat : surnom "Marie-Charlotte Mohamed" 💀</li>
     <li>30000 crushs différents au collège ❤️‍🔥</li>
-  <li>
-  Animal totem : le tardigrade (petit mais puissant)
-  <button onclick="window.location.href='tardigrade.html'" style="margin-left:10px; padding:4px 8px; border-radius:5px; background:#a5d6a7; border:none; cursor:pointer;">
-    En savoir plus
-  </button>
-</li>
+    <li>
+      Animal totem : le tardigrade (petit mais puissant)
+      <button onclick="window.location.href='tardigrade.html'" style="
+        margin-left: 10px;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #a5d6a7;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 0.9em;
+      ">
+        En savoir plus
+      </button>
+    </li>
   </ul>
 </section>
 
@@ -205,6 +214,12 @@
   }
 
   function reveal(button, isCorrect) {
+    if (button.disabled) return;
+
+    const container = button.closest('.quiz-question');
+    const buttons = container.querySelectorAll('button');
+    buttons.forEach(btn => btn.disabled = true);
+
     if (isCorrect) {
       button.classList.add('correct');
       button.textContent += " ✅";
@@ -212,7 +227,6 @@
       button.classList.add('incorrect');
       button.textContent += " ❌";
     }
-    button.disabled = true;
   }
 </script>
 
